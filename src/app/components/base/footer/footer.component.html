@@ -1,0 +1,13 @@
+
+
+<div fxLayout="row wrap" fxLayoutAlign="center start" fxLayoutGap="30px" class="footercontainer">
+  <div fxFlex="0 0 160px" *ngFor="let item of linkdata">
+    <h3><i class="anticon anticon-appstore"></i> {{item.title}}</h3>
+    <hr>
+    <p *ngFor="let content of item.contents"><i class="anticon anticon-double-right"></i>  <a href="#">{{content}}</a></p>
+  </div>
+</div>
+<div fxLayout="row wrap" fxLayoutAlign="space-around end" class="footerbottom">
+  <div><span>版权所有 © 2002-2012 闽ICP备10021275号 福建星网物联信息系统有限公司</span></div>
+  <div><span>星云安全服务平台 | 隐私条款 | 联系我们 | 站点统计</span></div>
+</div>

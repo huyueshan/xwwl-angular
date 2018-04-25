@@ -1,0 +1,20 @@
+{
+    "id": "111",
+    "imgsrc": "/assets/upfiles/case/img/201706121340008821.gif",
+    "title": "SN1635-CIL（C款）",
+    "text": "300万像素超低照度半球网络摄像机",
+    "tabs": [
+        {
+            "title": "tab1",
+            "content": "tabcontent1"
+        },
+        {
+            "title": "tab2",
+            "content": "<h1>tabcontent2</h1>"
+        },
+        {
+            "title": "tab3",
+            "content": "tabcontent3"
+        }
+    ]
+}

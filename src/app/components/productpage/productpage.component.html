@@ -1,0 +1,113 @@
+<div fxLayout="column wrap" fxLayoutAlign="start center">
+    <div>
+        <app-imgfull src="/assets/images/top_products.jpg" width="960px" title=""></app-imgfull>
+    </div>
+
+    <div style="width:960px;">
+        <div fxLayout="row" fxLayoutAlign="space-between  start" fxLayoutGap="12px">
+            <div fxFlex="246px" fxFlexFill style="padding:15px 4px;border:1px solid #d2d2d2;background-color:#f3f3f3;">
+                <div style="width:100%;padding-left:20px;height:33px;line-height:33px;background-image:url('/assets/images/cplb.jpg');background-repeat:no-repeat;">
+                    <span class="title_menu">产品列表</span>
+                </div>
+                <div fxLayout="column" fxLayoutAlign="start start" fxLayoutGap="10px" style="padding-top: 10px" *ngFor="let item of productslist">
+                    <div style="width:200px;padding:0 0 10px 30px;border-bottom:1px dotted #666;line-height:25px;">
+                        <p class="title_1">{{item.type}}</p>
+                        <div *ngFor="let item of item.list" style="padding-left: 10px;">
+                            <img src="/assets/images/ico_6.gif" width="9" height="9" valign="absmiddle">
+                            <a href="javascript:;" class="pro_class">{{item}}</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div fxFlex="710px" fxFlexFill>
+                    <nz-button-group [nzSize]="'small'" >
+                        <button *ngFor="let item of productselectdata" nz-button (click)="productselect(item.id)" [nzType]="'primary'">{{item.title}}</button>
+                        <!-- <button nz-button (click)="productselect('222')" [nzType]="'primary'">产品222</button> -->
+
+                    </nz-button-group>
+                <div style="width:690px;height:25px;border-bottom:1px dashed #888;">
+                    <nz-breadcrumb [nzSeparator]="'>'">
+                        <span>您现在的位置：</span>
+                        <nz-breadcrumb-item>
+                            <a [routerLink]="['/home']">首页</a>
+                        </nz-breadcrumb-item>
+                        <nz-breadcrumb-item>
+                            <a [routerLink]="['/products']">产品中心</a>
+                        </nz-breadcrumb-item>
+                        <nz-breadcrumb-item>
+                            SN1635-CIL（C款）
+                        </nz-breadcrumb-item>
+
+                    </nz-breadcrumb>
+                </div>
+                <div>
+                    <!-- <app-productcontent></app-productcontent> -->
+                </div>
+                <div fxLayout="row" fxLayoutAlign="space-between center" fxLayoutGap="20px" style="width:100%; padding:30px 0;">
+                    <img src="{{productdataimgsrc}}" width="260" height="168" class="border">
+                    <div style="width:430px;padding-top:30px;">
+                        <div style="text-align: center;">
+                            <span class="title">{{productdatatietle}}</span>
+                            <br>{{productdatatext}}
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    ngcontainer
+                    <nz-tabset nzType="card" nzSize="default" nzTabPosition="top" (nzSelectChange)="_tabChange($event)">
+                        <nz-tab *ngFor="let tab of tabs">
+                            <ng-template #nzTabHeading>
+                                {{tab.title}}
+                            </ng-template>
+
+                            <div [innerHTML]="tab.content">
+
+                            </div>
+
+                        </nz-tab>
+                    </nz-tabset>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<!-- <nz-table #nzTable [nzDataSource]="" [nzPageSize]="10">
+    <thead nz-thead>
+        <tr>
+            <th nz-th><span>标题</span></th>
+
+            <th nz-th><span></span></th>
+        </tr>
+    </thead>
+    <tbody nz-tbody>
+        <tr nz-tbody-tr *ngFor="let i of nzTable.data">
+            <td nz-td>{{i.title}}</td>
+
+            <td nz-td>
+                <span>
+                    <a href="#" (click)="edit(i)">编辑</a>
+                    <span nz-table-divider></span>
+                    <a href="#" (click)="del(i)">删除</a>
+                    <span nz-table-divider></span>
+                    <nz-dropdown>
+                        <a class="ant-dropdown-link" nz-dropdown>
+                            更多 <i class="anticon anticon-down"></i>
+                        </a>
+                        <ul nz-menu>
+                            <li nz-menu-item>
+                                <a>active</a>
+                            </li>
+                        </ul>
+                    </nz-dropdown>
+
+                </span>
+            </td>
+        </tr>
+    </tbody>
+</nz-table> -->
+
+
+<input type="text">

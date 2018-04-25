@@ -1,0 +1,114 @@
+<app-carousel>
+</app-carousel>
+
+<div fxLayout="column" fxLayoutAlign="center center">
+    <div fxLayout="row wrap" fxLayoutAlign="space-between stretch" style="width:960px; background-color:#0071BC;">
+
+        <div fxFlex="100px;" style="height:41px;background-image:url('assets/images/turn_news_bg_1.png');cursor:pointer;" onclick="javascript:window.location.href='#'">
+            &nbsp;
+        </div>
+        <div fxFlex="753px;" style="padding-left:6px;height:41px;line-height:41px;background-image:url('assets/images/turn_news_bg_2.png');">
+            <div fxLayout="row wrap" fxLayoutAlign="space-between stretch">
+                <div fxFlex="600px" style="height:41px;">
+                    <nz-carousel [nzEffect]="'scrollx'" [nzDots]="false" [nzVertical]="true" [nzAutoPlay]="true">
+                        <div nz-carousel-content *ngFor="let item of newslist" style="height:41px; color:white;">
+                            <span>{{item}}</span>
+
+                        </div>
+                    </nz-carousel>
+
+                </div>
+
+                <div fxFlex="100px;" style="height:21px;">
+                    <a href="#">
+                        <img src="assets/images/more.png">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div fxFlex="98px;" style="height:41px;background:#0071BC;float:left;">
+            <a href="#">
+                <img src="assets/images/afxsd.jpg" title="欢迎访问安防星视点" style="margin-top:5px;">
+            </a>
+        </div>
+    </div>
+
+
+
+    <div fxLayout="row wrap" style="width:960px;" fxLayoutAlign="space-between stretch">
+        <div fxFlex="253px">
+            <a href="http://xy3.star-netsecurity.com" target="_blank" title="星云服务平台">
+                <img src="assets/images/xyfwpt.png" width="253px;" height="210px">
+            </a>
+        </div>
+        <div fxFlex="450px">
+            <nz-card>
+                <ng-template #title>
+                    <h2>推荐列表</h2>
+                </ng-template>
+                <ng-template #extra>
+                    <button nz-button (click)="click()" [nzType]="'dashed'" [nzSize]="'small'">
+                        <i class="anticon anticon-double-left"></i>
+                    </button>
+                    &nbsp; &nbsp;
+                    <button nz-button (click)="click()" [nzType]="'dashed'" [nzSize]="'small'">
+                        <i class="anticon anticon-double-right"></i>
+
+                    </button>
+
+                </ng-template>
+                <ng-template #body>
+                    <nz-carousel [nzEffect]="'scrollx'" [nzDots]="true" [nzVertical]="false" [nzAutoPlay]="true">
+                        <div nz-carousel-content *ngFor="let item of tuijian_list">
+                            <a href="#">
+                                <img [src]="item.src" width="436" height="167" style="border: none;">
+                            </a>
+                        </div>
+                    </nz-carousel>
+
+                </ng-template>
+            </nz-card>
+
+        </div>
+
+
+
+        <div fxFlex="253px" style="background-image: url(assets/images/WEB-05.png); height: 210px;" >
+            <div fxLayout="column wrap" fxLayoutAlign="space-between stretch">
+                <div fxFlex="90px" style="padding-top: 80px">
+                    <div fxLayout="row" fxLayoutAlign="space-evenly center">
+                        <div style="width:60px;height:90px; text-align:center;">
+                            <a href="？" target="_blank">
+                                <img src="assets/images/kf.png" width="60" height="60" border="0">
+                            </a>
+                            <br> 在线客服
+                        </div>
+
+                        <div style="width:60px;height:90px;text-align:center;">
+                            <a href="?">
+                                <img src="assets/images/yj.png" width="60" height="60" border="0">
+                            </a>
+                            <br> 意见反馈
+                        </div>
+                    </div>
+                </div>
+                <div fxFlex="35px" fxFlexOffset="85px" style="width:100%; ">
+                    <div fxLayout="row wrap" fxLayoutAlign="center center">
+                        <span>快速通道： &nbsp;</span>
+                        <nz-select [(ngModel)]="tongdao" name="tongdao" [nzPlaceHolder]="'--请选择--'" [nzAllowClear]="true" style="width: 120px;" >
+                            <nz-option
+                                *ngFor="let item of tongdaolist"
+                                [nzLabel]="item.label"
+                                [nzValue]="item.value"
+                                [nzDisabled]="fasle">
+                            </nz-option>
+                        </nz-select>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</div>

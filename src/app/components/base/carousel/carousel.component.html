@@ -1,0 +1,12 @@
+
+
+<div class="img-box" (mouseenter)="clearInv()" (mouseleave)="runIntV()">
+  <img src="../../../assets/images/201702151328556075.jpg"/>
+  <div id="img-item-last" [@flyInOut]="state"><img [src]="frist_img_name"/></div>
+  <div id="img-item-first" [@flyInOut]="secontstate"><img [src]="secontstate_img_name" /></div>
+  <span id="previcon" (click)="runSeverse(null)">&laquo;</span>
+  <span id="nexticon" (click)="toggleState(null)">&raquo;</span>
+</div>
+<div class="icon-box">
+  <strong *ngFor ="let item of img_list; index as i" [ngClass]="{iconactive: current_img_index == i}" (click)="iconfn(i)">{{i+1}}</strong>
+</div>

@@ -1,0 +1,20 @@
+{
+    "id": "222",
+    "imgsrc": "/assets/upfiles/case/img/201705031604246066.jpg",
+    "title": "SN1827-ZB03B",
+    "text": "直播网络高清摄像机",
+    "tabs": [
+        {
+            "title": "tab1",
+        "content": "tabcontent1"
+        },
+        {
+        "title": "tab2",
+        "content": "<h1>tabcontent2</h1>"
+        },
+        {
+        "title": "tab3",
+        "content": "tabcontent3"
+        }
+    ]
+}

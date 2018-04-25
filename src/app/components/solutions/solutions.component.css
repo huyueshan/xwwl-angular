@@ -1,0 +1,32 @@
+
+
+:host >>> .ant-menu-item-group-title{
+  font-size: 14px;
+
+}
+:host >>> .ant-card-body{
+  padding:0;
+
+}
+:host >>> .ant-menu-vertical .ant-menu-item, .ant-menu-inline {
+  height: 24px;
+  line-height: 24px;
+
+}
+:host >>> .ant-card-head-title{
+  font-size: 18px;
+  font-weight: 600;
+  color: white;
+}
+:host >>> .ant-card-head{
+  background-color: #414141;
+}
+.solutions_1 {
+  margin-left: 40px;
+  font-family: '微软雅黑';
+  line-height: 35px;
+  font-size: 15px;
+  color: #336699;
+}
+
+

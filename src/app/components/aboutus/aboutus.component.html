@@ -1,0 +1,107 @@
+<div fxLayout="column wrap" fxLayoutAlign="start center">
+  <app-imgfull src="/assets/images/banner_aboutus.jpg" width="960px" title=""></app-imgfull>
+  <div>
+    <div fxLayout="row wrap" fxLayoutAlign="space-between start" style="width:960px;">
+      <div fxFlex="760px">
+        <div fxLayout="row wrap" fxLayoutGap="5px">
+          <div fxFlex="470px" class="modleclass">
+            <app-listtitle title="公司新闻" isrighthide=true></app-listtitle>
+            <div style=" height:182px;" class="border1">
+
+              <app-contentlist src="ico_6.gif" [contentlist]="companynewslist"></app-contentlist>
+            </div>
+
+          </div>
+          <div fxFlex="275px" class="modleclass" style="height:216px;">
+            <app-listtitle title="公司介绍"></app-listtitle>
+            <div style=" height:182px;" class="border1">
+
+              <app-imgfull src="/assets/images/a_5.jpg" title="公司简介" width="265px"></app-imgfull>
+              <div fxLayout="row wrap" fxLayoutGap="15px" style="padding: 10px 12px">
+                <div *ngFor="let item of jieshaolist" style="height:30px;">
+                  <img src="/assets/images/ico_6.gif">&nbsp;
+                  <a href="?" title="{{item.name}}">{{item.name}}</a>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <div fxFlex="470px" class="modleclass">
+            <app-listtitle title="活动专题"></app-listtitle>
+            <div class="border1" fxLayout="wrap wrap" fxLayoutAlign="space-around stretch">
+              <div fxFlex="470"
+                   style="padding:0 10px;border:1px solid #EEE;height:280px;padding-bottom:10px;line-height:22px;">
+
+                <div fxLayout="row wrap" style="padding-top:10px;border-bottom:1px dashed #DDD;">
+                  <div fxFlex="100px" style="padding-top:10px;">
+                    <a href="?" title="阅读详细"><img src="/assets/images/201406291635527034.jpg" width="100" height="100"></a>
+                  </div>
+                  <div fxFlex="333px" style="padding-left:20px;float:left;">
+                    <span class="title_3">安防企业该如何抢占三网融合的先机!</span><br>
+                    对于安防行业来说，三网融合究竟会带来什么影响？是否会解决安防技术上的一些问题？对安防企业来说，三网融合意味着什么？面对三网融合的浪潮，安防企业应如何抓住机遇来促进安防产品的创新和新业务的拓展？
+                    [<a href="jacvscript:;"> 详细阅读</a>]
+                  </div>
+
+                </div>
+
+                <div fxLayout="row wrap" style="padding-top:10px;border-bottom:1px dashed #DDD;">
+                  <div fxFlex="100px" style="padding-top:10px;">
+                    <a href="?" title="阅读详细"><img src="/assets/images/201406291524146020.jpg" width="100" height="100"></a>
+                  </div>
+                  <div fxFlex="333px" style="padding-left:20px;float:left;">
+                    <span class="title_3">星网锐捷安星工程为您解忧</span><br>
+                    四处奔波的你，还在担心家的安全？还在牵挂家中的老人和孩子？还在惦记着店里运营的每一个细节？今天，所有的问题，不再烦恼！星网锐捷安防工程为您解忧！
+                    [<a href="jacvscript:;">详细阅读</a>]
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div fxFlex="275px" class="modleclass">
+            <div fxLayout="column" fxLayoutAlign="start stretch" fxLayoutGap="10px">
+              <div>
+                <app-listtitle title="品牌.资源"></app-listtitle>
+                <div class="border1" style="padding: 5px 0;">
+                  <div style=" height:52px; padding-bottom: 8px;">
+                    <div fxLayout="row wrap" fxLayoutGap="15px" style="padding: 5px 12px">
+                      <div *ngFor="let item of jieshaolist" style="height:30px;">
+                        <img src="/assets/images/ico_6.gif">&nbsp;
+                        <a href="?" title="{{item.name}}">{{item.name}}</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <app-listtitle title="加入我们"></app-listtitle>
+                <div class="border1" style="padding: 15px 0;">
+                  <div style=" height:140px;">
+
+                    <app-imgfull src="/assets/images/a_6.jpg" title="加入我们" width="265px"></app-imgfull>
+                    <div fxLayout="row wrap" fxLayoutGap="15px" style="padding: 10px 12px">
+                      <div *ngFor="let item of jieshaolist" style="height:30px;">
+                        <img src="/assets/images/ico_6.gif">&nbsp;
+                        <a href="javascript:;" title="{{item.name}}">{{item.name}}</a>
+                      </div>
+                    </div>
+                  </div>
+
+
+                  <!-- ================== -->
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+
+        </div>
+      </div>
+      <div fxFlex="200px">
+        <app-sideright></app-sideright>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,11 @@
+
+
+
+<div fxLayout="row wrap" fxLayoutAlign="space-between center" fxLayoutGap="15px" style="width:100%;height:35px;background-image:url('/assets/images/nav_solutions_1.jpg');">
+  <div fxFlex="150px">
+    <span class="solutions_1">{{title}}</span>
+  </div>
+  <div style="width:60px;line-height:35px;" [fxHide]="isrighthide?false:true">
+    <a [href]="href?href:'javascript:;'">更<span>&nbsp;</span>多</a>
+  </div>
+</div>

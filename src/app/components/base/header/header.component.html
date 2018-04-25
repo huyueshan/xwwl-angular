@@ -1,0 +1,95 @@
+
+
+<div fxLayoutAlign="center end" fxLayoutGap="20px">
+
+  <div>
+    <a routerLink="/home">
+      <img src="../assets/images/logo.gif" alt="新海物联科技有限公司">
+    </a>
+  </div>
+  <div class="headernav">
+    <nav mat-tab-nav-bar>
+        <a mat-tab-link
+           *ngFor="let link of tabLinks"
+           [routerLink]="link.url"
+           routerLinkActive #rla="routerLinkActive"
+           [active]="rla.isActive">
+          <span mat-button [matMenuTriggerFor]="menu">
+              {{link.title}}
+          </span>
+            <mat-menu #menu="matMenu" overlapTrigger="false">
+              <mat-card>
+                  <mat-card-header>
+                      <mat-card-title>Title</mat-card-title>
+                      <mat-card-subtitle>Subtitle</mat-card-subtitle>
+                  </mat-card-header>
+                  <img matCardImage src="assets/images/107(2).jpg">
+                  <mat-card-content>
+                      Text content
+                  </mat-card-content>
+                  <mat-card-actions align="start">
+                  </mat-card-actions>
+                  <mat-card-footer>
+                      Footer
+                  </mat-card-footer>
+              </mat-card>
+            </mat-menu>
+        </a>
+      </nav>
+
+  </div>
+  <div fxLayout="column wrap" fxLayoutAlign="between center">
+    <div><span>联系我们    |    相关链接</span></div>
+    <mat-input-container floatPlaceholder="auto">
+        <input matInput
+               type="search"
+               placeholder="">
+        <span matSuffix>
+          <button mat-icon-button (click)="onClick()">
+              <mat-icon class="mat-18">search</mat-icon>
+          </button>
+        </span>
+    </mat-input-container>
+  </div>
+</div>
+
+<br>
+<br>
+<br>
+<div fxLayout="row wrap" fxLayoutAlign="center end" fxLayoutGap="20px">
+    <div>
+        <a routerLink="/home">
+          <img src="../assets/images/logo.gif" alt="新海物联科技有限公司">
+        </a>
+    </div>
+    <div>
+        <ul nz-menu [nzMode]="'horizontal'">
+          <li nz-menu-item [nzSelected]="currentitem=='home'?true:false" *ngFor="let item of tabLinks">
+
+            <div nz-submenu (click)="onClick(item.title)">
+              <span title [routerLink]="item.url" style="display:block;width:100%; height:100%;outline:none;">
+                {{item.title}}
+              </span>
+              <nz-card>
+                  <ng-template #title>yiew owie wei we  rih </ng-template>
+                  <ng-template #body>
+                    ufh wheohwe rihwephrwei rhwerh re  rwe ewt wqteqrwt rtqwrtq wt t
+
+                  </ng-template>
+              </nz-card>
+
+            </div>
+          </li>
+
+          </ul>
+    </div>
+    <div fxLayout="column wrap" fxLayoutAlign="end center">
+        <div>
+          <a href="#">联系我们</a>    |   <a href="#">相关链接</a>
+        </div>
+        <div style="padding-top:10px;">
+          <nz-input nzType="search" nzPlaceHolder="input search text" style="width: 200px;" (nzOnSearch)="onSearch($event)" [(ngModel)]="searchvalue"></nz-input>
+        </div>
+    </div>
+
+</div>

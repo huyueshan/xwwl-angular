@@ -1,0 +1,89 @@
+<div fxLayout="column wrap" fxLayoutAlign="start center">
+    <app-imgfull [src]= "imgfullsrc" [width] = "imgfullwidth" title=""></app-imgfull>
+
+  <div fxLayout="row wrap">
+    <!-- 左边开始 -->
+    <div fxFlex="200px" style="padding-right: 8px;">
+      <div fxLayout="column">
+        <nz-card>
+          <ng-template #title class="solutiontitle">
+            <i class="anticon anticon-key"></i>
+            <span> &nbsp; &nbsp;</span> 解决方案</ng-template>
+
+
+          <ng-template #body>
+            <ul nz-menu [nzTheme]="'light'">
+              <li nz-menu-group *ngFor="let item of solutions_left_data" style="border-bottom: 1px dotted #999; margin:0 8px;">
+                <span title>
+                  <i class="anticon anticon-plus"></i> &nbsp;{{item.title}}</span>
+                <ul>
+                  <li nz-menu-item *ngFor="let item of item.contentlist">
+                    <i class="anticon anticon-right-square-o"></i>{{item.text}}</li>
+                </ul>
+              </li>
+            </ul>
+          </ng-template>
+        </nz-card>
+
+      </div>
+    </div>
+    <!-- 右边开始 -->
+    <div fxFlex="760px">
+      <div fxLayout="column">
+        <div fxFlex="35px" style="background-image:url('/assets/images/nav_solutions_1.jpg');">
+          <div fxLayout="row wrap" fxLayoutAlign="space-between center" style="height: 35px; line-height: 35px;">
+            <div class="solutions_1">成功案例</div>
+            <div style="padding-right: 40px;">
+              <a href="?">更 多</a>
+            </div>
+          </div>
+        </div>
+        <div fxFlex="180px" style="background-color: red;"></div>
+        <!-- 右边列表 -->
+        <div>
+          <div fxLayout="row wrap" fxLayoutAlign="space-around center" style="width: 760px; padding-top:10px;">
+            <!-- 栏内容 -->
+            <div fxFlex="210px" *ngFor="let item of solutions_right_data">
+              <div fxLayout="column wrap" fxLayoutGap="20px">
+                <!-- title -->
+                <div>
+                  <div fxLayout="row wrap" fxLayoutAlign="start center">
+
+                    <div fxFlex="170px">
+                      <img src="/assets/images/ico_5.gif">
+                      <span class="title_3">{{item.title}}</span>
+                      <br>
+                    </div>
+                    <div>
+                      <a href="?" class="more_1">更多</a>
+                    </div>
+                  </div>
+                </div>
+                <!-- img -->
+                <div style="width:210px;height:100px;">
+                  <img src="/assets/images/{{item.src}}" width="200" height="90">
+                </div>
+                <!-- list -->
+                <div>
+                    <app-contentlist src="ico_6.gif" [contentlist]="item.contentlist"></app-contentlist>
+                  <!-- <div fxLayout="row wrap" fxLayoutAlign="space-between center">
+                    <div style="width:210px;" *ngFor="let item of item.contentlist">
+                      <div style="height:25px;border-bottom:1px dashed #CCC; padding-top:5px;">
+                        <img src="/assets/images/ico_6.gif"> &nbsp;
+                        <a href="item.href?item.href:'javascript:;'" title="{{item.text}}">{{item.text}}</a>
+                        <br>
+                      </div>
+                    </div>
+                  </div> -->
+                </div>
+
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>

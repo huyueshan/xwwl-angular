@@ -1,0 +1,78 @@
+<div fxLayout="column wrap" fxLayoutAlign="start center" fxLayoutGap="10px">
+  <app-imgfull width="960px" src="/assets/images/banner_services.jpg" title=""></app-imgfull>
+  <div style="width:960px;">
+    <div fxLayout="row wrap" fxLayoutAlign="space-between stretch">
+      <div fxFlex="405px">
+        <app-listtitle title="文档中心"></app-listtitle>
+        <div fxLayout="column" fxLayoutAlign="start center" fxLayoutGap="18px" class="border1" style="padding-top: 20px;">
+
+          <div fxFlex="205px" style="width:370px;">
+            <div fxLayout="row wrap" fxLayoutAlign="space-between center" fxLayoutGap="20px" style="height:25px;margin-bottom:10px;border-bottom:2px solid #3C3;">
+              <div fxFlex="150PX">
+                »
+                <font class="title_3">技术文档中心</font>
+              </div>
+              <div fxFlex="60px">
+                <a href="javascript:;">更 多</a>
+              </div>
+            </div>
+
+
+            <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="8px" style="border-bottom:1px dashed #CCC;padding-left: 10px; height: 28px; line-height: 28px;"
+              *ngFor="let item of whycenter">
+
+              <img src="/assets/images/ico_6.gif">
+              <a href="{{item.href}}" class="news">{{item.text}}</a>
+            </div>
+
+
+
+          </div>
+          <div fxFlex="205px" style="width:370px;">
+            <div fxLayout="row wrap" fxLayoutAlign="space-between center" fxLayoutGap="20px" style="height:25px;margin-bottom:10px;border-bottom:2px solid #3C3;">
+              <div fxFlex="150PX">
+                »
+                <font class="title_3">常见问题F&Q</font>
+              </div>
+              <div fxFlex="60px">
+                <a href="?">更 多</a>
+              </div>
+            </div>
+
+
+            <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="8px" style="border-bottom:1px dashed #CCC;padding-left: 10px; height: 28px; line-height: 28px;"
+              *ngFor="let item of filecenter">
+
+              <img src="/assets/images/ico_6.gif">
+              <a href="{{item.href}}" class="news">{{item.text}}</a>
+            </div>
+
+
+
+          </div>
+        </div>
+      </div>
+
+      <div fxFlex="345px">
+        <app-listtitle title="服务支持"></app-listtitle>
+        <div fxLayout="column wrap" fxLayoutAlign="center stretch" fxLayoutGap="10px" class="border1" style="height: 450px;">
+          <div *ngFor="let item of servecenter">
+            <div fxLayout="row wrap" fxLayoutAlign="start center" fxLayoutGap="5px" style="height: 78px; padding-left: 30px;">
+              <div fxFlex="70px">
+                <img src="{{item.imgsrc}}" width="49" height="49">
+              </div>
+              <div fxFlex="230px">
+                <span class="title_3">{{item.title}}</span>
+                <br>
+                <a href="{{item.link}}" class="news">{{item.text}}</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div fxFlex="191px">
+        <app-sideright></app-sideright>
+      </div>
+    </div>
+  </div>
+</div>

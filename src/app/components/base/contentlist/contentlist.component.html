@@ -1,0 +1,11 @@
+
+
+<div fxLayout="row wrap" fxLayoutAlign="space-between center">
+    <div style="width:100%; padding:0;" *ngFor="let item of contentlist">
+      <div style="height:25px;border-bottom:1px dashed #CCC; padding-top:5px;">
+        <img src="/assets/images/{{src}}"> &nbsp;
+        <a href="?" title="{{item.text}}">{{item.text}}</a>
+        <br>
+      </div>
+    </div>
+  </div>

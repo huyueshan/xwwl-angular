@@ -1,0 +1,53 @@
+<div fxLayout="row wrap" fxLayoutAlign="space-around center" class="box">
+  <div fxFlex="50%" class="box1"></div>
+  <div fxFlex="30" class="box2"></div>
+  <div class="box3" fxFlex="10"></div>
+
+</div>
+<br><br>
+
+
+<div fxLayout="row wrap" fxLayoutAlign="center start" class="box">
+  <div class="box4" style="height:50px">1</div>
+  <div class="box4" style="height:40px">2</div>
+  <div class="box4" style="height:60px">3</div>
+  <div class="box4" style="height:30px">4</div>
+  <div class="box4" style="height:70px">5</div>
+  <div class="box4" style="height:80px">6</div>
+  <div class="box4" style="height:20px">7</div>
+  <div class="box4" style="height:30px">8</div>
+
+</div>
+<mat-icon class="mat-18">face</mat-icon>
+<mat-icon class="mat-36" color="primary">face</mat-icon>
+
+
+<div style="width:100%; height:400px; text-align:center; border:1px solid red">
+<mat-tab-group [disableRipple]="false">
+    <mat-tab  *ngFor="let tab of tabLinks" [label]='tab.title'>
+        {{tab.title}}
+    </mat-tab>
+</mat-tab-group>
+  <ul>
+    dajiahao
+    <li *ngFor="let tabLink of tabLinks">{{tabLink.title}}</li>
+  </ul>
+</div>
+
+
+<mat-sidenav-container class="sidenav-containe">
+    <mat-sidenav mode="over" align="start" opened>
+        Sidenav content
+    </mat-sidenav>
+    <mat-sidenav mode="over" align="end" opened>
+        End sidenav content
+    </mat-sidenav>
+    <button mat-fab (click)="onClick">
+        <mat-icon class="mat-18">face</mat-icon>
+    </button>
+    <!--
+    FAB should be placed with absolute positioning in the container via css
+    -->
+    <!-- Body -->
+
+</mat-sidenav-container>

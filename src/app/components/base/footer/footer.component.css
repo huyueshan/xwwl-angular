@@ -1,0 +1,20 @@
+
+:host {
+    padding-top:40px;
+}
+
+
+.footercontainer{
+    background-color: #ddd;
+    padding: 18px 0;
+    color: rgb(39, 35, 35);
+}
+.footerbottom{
+    background-color: #555;
+    color: white;
+    padding:5px 0;
+}
+.footercontainer a{
+    /* text-decoration: none; */
+    color: rgb(39, 35, 35);
+}

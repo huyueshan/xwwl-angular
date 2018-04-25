@@ -1,0 +1,59 @@
+
+<div class="contain">
+  <div fxLayout="row nowrap">
+    <div fxFlex="760px" style="padding: 30px 10px;">
+      <div fxLayout="column wrap" fxLayoutGap="10px">
+        <div fxFlex="34">
+          <img src="/assets/images/cpzx.jpg">
+        </div>
+        <div class="productwrap">
+          <div fxLayout="row wrap">
+            <div class="productclass" *ngFor="let item of productclassdata">
+              <img [src]="'/assets/images/' + item.src" width="110" height="70">
+              <div *ngFor="let item of item.child">
+                <a href="?" class="foot">{{item.title}}</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div fxFlex="34">
+          <img src="/assets/images/tjcp.jpg">
+        </div>
+        <div fxLayout="row wrap" class="productwrap">
+          <div class="productclass_tj productclass" fxLayout="row nowrap">
+            <div fxFlex="150px">
+              <a href="product_377.html">
+                <img src="/assets/images/201603291032071288.jpg" width="130" height="84" class="border">
+              </a>
+            </div>
+            <div style="width:210px;">
+              <a href="product_377.html" class="title_3">车牌识别车辆出入口管理系统</a>
+              <br>
+              <a href="?" class="product_tuijian"></a>
+            </div>
+
+          </div>
+          <div class="productclass_tj productclass" fxLayout="row nowrap">
+            <div fxFlex="150px">
+              <a href="?">
+                <img src="/assets/images/201507230943577940.jpg" width="130" height="84" class="border">
+              </a>
+            </div>
+            <div style="width:210px;text-align:left;float:left;">
+              <a href="?" class="title_3">SN-DK1600</a>
+              <br>
+              <a href="product_377.html" class="product_tuijian">节能灯控系统</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+    <!-- 产品右侧内容 -->
+
+    <div fxFlex="200px">
+        <app-sideright></app-sideright>
+    </div>
+  </div>

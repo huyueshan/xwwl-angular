@@ -1,0 +1,76 @@
+<div fxLayout="column wrap" fxLayoutAlign="start center">
+  <app-imgfull [src]="imgfullsrc" [width]="imgfullwidth" title=""></app-imgfull>
+  <div>
+    <div fxLayout="row wrap" fxLayoutAlign="space-between start" style="width:960px;">
+      <div fxFlex="760px">
+        <div fxLayout="row wrap" fxLayoutGap="5px">
+          <div fxFlex="470px" class="modleclass">
+            <app-listtitle title="渠道新闻" isrighthide=true></app-listtitle>
+            <div style=" height:182px;" class="border1">
+
+              <app-contentlist src="ico_6.gif" [contentlist]="newslist"></app-contentlist>
+            </div>
+
+          </div>
+          <div fxFlex="275px" class="modleclass" style="height:216px;">
+            <app-listtitle title="公司介绍"></app-listtitle>
+            <div style=" height:182px;" class="border1">
+
+              <app-imgfull src="/assets/images/a_5.jpg" title="公司简介" width="265px"></app-imgfull>
+              <div fxLayout="row wrap" fxLayoutGap="15px" style="padding: 10px 12px">
+                <div *ngFor="let item of jieshaolist" style="height:30px;">
+                  <img src="/assets/images/ico_6.gif">&nbsp;
+                  <a href="?" title="{{item.name}}">{{item.name}}</a>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <div fxFlex="470px" class="modleclass">
+            <app-listtitle title="渠道理念"></app-listtitle>
+            <div class="border1" fxLayout="wrap wrap" fxLayoutAlign="space-around stretch">
+              <div fxFlex="470"
+                   style="padding:0 10px;border:1px solid #EEE;height:280px;padding-bottom:10px;line-height:22px;">
+
+                <div fxLayout="row wrap" style="padding-top:10px;border-bottom:1px dashed #DDD;">
+                  <div fxFlex="100px" style="padding-top:10px;">
+                    <a href="?" title="阅读详细"><img src="/assets/images/20120731011553.jpg" width="100" height="100"></a>
+                  </div>
+                  <div fxFlex="333px" style="padding-left:20px;float:left;">
+                    <span class="title_3">总经理致辞--科技构建平安，合作共赢未来!</span><br>
+                    这是最好的时代，这是智慧的时代，这是创新的时代，这是颠覆的时代…百亿的市场规模、雪崩式的高速成长、群雄并起的市场格局、稍纵即逝的市场转折机遇，正呼唤我们一同开创中国视频监控市场的新时代，一个属于我们的新时代！
+                    [<a href="?sn=partners_text_show&amp;fid=1">详细</a>]
+                  </div>
+
+                </div>
+
+                <div fxLayout="row wrap" style="padding-top:10px;border-bottom:1px dashed #DDD;">
+                  <div fxFlex="100px" style="padding-top:10px;">
+                    <a href="?" title="阅读详细"><img src="/assets/images/20120731011805.jpg" width="100" height="100"></a>
+                  </div>
+                  <div fxFlex="333px" style="padding-left:20px;float:left;">
+                    <span class="title_3">渠道经营理念</span><br>
+                    在渠道合作方面，星网锐捷长期坚持“合作共赢”的渠道政策得到了相关产品合作渠道的广泛认可，也吸引了全国渠道的加盟。通过与星网锐捷的合作，我们可以给渠道带来三方面的价值…
+                    [<a href="?sn=partners_text_show&amp;fid=1">详细</a>]
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div fxFlex="275px" class="modleclass">
+            <app-listtitle title="上游合作伙伴"></app-listtitle>
+            <div class="border1" style="padding: 15px 0;">
+              <img src="/assets/images/logo.jpg">
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <div fxFlex="200px">
+        <app-sideright></app-sideright>
+      </div>
+    </div>
+  </div>
+</div>

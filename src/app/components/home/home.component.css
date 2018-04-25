@@ -1,0 +1,13 @@
+
+
+:host >>>.ant-card-body{
+    padding:0;
+}
+:host >>>.ant-card-body img{
+    width:100%;
+    height:auto;
+    border:none;
+}
+:host >>>.ant-card-head{
+    height:40px;
+}
